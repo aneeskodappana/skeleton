@@ -3,7 +3,7 @@
 ### Usage
 
 - Wrap your components inside `<Skeleton />`
-- Place `<Shape />` where you want show the loader
+- Place `<Shape />` where you want to show the loader
 
 ### Example
 
