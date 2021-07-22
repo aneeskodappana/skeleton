@@ -2,6 +2,7 @@
   width: 1170px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .skeleton-loading {
@@ -12,7 +13,7 @@
   height: 100%;
   position: absolute;
   animation: loading 2s infinite;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.718), transparent);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.918), transparent);
   filter: blur(20px);
 }
 

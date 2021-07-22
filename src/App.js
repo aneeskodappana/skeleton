@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="container">
+
       <div className={"box"}>
         <Skeleton untilLoaded={person}>
           <h1>{person?.name ?? <Shape height={30} />}</h1>
@@ -69,19 +70,36 @@ function App() {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequuntur ipsam quae veniam facere quam repudiandae ab sint
-              quas esse deserunt, similique rem reiciendis id earum saepe
-              praesentium laboriosam molestias quaerat!
+              quas.
             </p>
           ) : (
             <div>
               <Shape width={"70%"} />
               <Shape width={"80%"} />
               <Shape width={"75%"} />
-              <Shape width={"90%"} />
+              <Shape width={"50%"} />
             </div>
           )}
         </Skeleton>
       </div>
+
+      <div className={"box"}>
+        <Skeleton untilLoaded={person}>
+          {person ? (
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur ipsam quae veniam facere quam repudiandae ab sint
+              quas esse deserunt, similique rem reiciendis id earum saepe
+              praesentium laboriosam molestias quaerat!
+            </p>
+          ) : (
+            <div>
+              <Shape width={"100%"} lines={6} />
+            </div>
+          )}
+        </Skeleton>
+      </div>
+
     </div>
   );
 }
