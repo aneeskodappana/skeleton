@@ -1,9 +1,6 @@
-function Skeleton({
-  circle = false,
-  width = 100,
-  height = 100,
-  background = "#eaeaea",
-  align = "left",
-}) {
-  return <div></div>;
+export default function Skeleton({ children }) {
+  return <div style={{ position: "relative", display: 'inline-block' }}>
+    {children}
+    <div className="skeleton-loading"></div>
+  </div>;
 }

@@ -2,3 +2,22 @@
   width: 1170px;
   margin: 0 auto;
 }
+
+.skeleton-loading {
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  animation: loading 2s infinite;
+
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.618), #fff);
+  filter: blur(20px)
+}
+
+
+@keyframes loading {
+  from {left: 0}
+  to {left : 100%}
+}
