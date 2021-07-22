@@ -1,23 +1,49 @@
 .container {
   width: 1170px;
   margin: 0 auto;
+  display: flex;
 }
 
 .skeleton-loading {
   background-color: #fff;
   left: 0;
   top: 0;
-  width: 50px;
+  width: 100px;
   height: 100%;
   position: absolute;
   animation: loading 2s infinite;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.718), transparent);
+  filter: blur(20px);
+}
 
-  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.618), #fff);
-  filter: blur(20px)
+@keyframes loading {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.box {
+  margin: 30px;
+  width: 300px;
 }
 
 
-@keyframes loading {
-  from {left: 0}
-  to {left : 100%}
+.text-center {
+  text-align: center;
+}
+
+.example-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.example-img-2 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }

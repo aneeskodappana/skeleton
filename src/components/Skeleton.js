@@ -1,6 +1,8 @@
-export default function Skeleton({ children }) {
-  return <div style={{ position: "relative", display: 'inline-block' }}>
-    {children}
-    <div className="skeleton-loading"></div>
-  </div>;
+export default function Skeleton({ children, untilLoaded = false }) {
+  return (
+    <div style={{ position: "relative", display: "block" }}>
+      {children}
+      {!untilLoaded && <div className="skeleton-loading"></div>}
+    </div>
+  );
 }
