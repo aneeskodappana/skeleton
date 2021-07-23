@@ -100,6 +100,29 @@ function App() {
         </Skeleton>
       </div>
 
+      <div className={"box"}>
+        <Skeleton untilLoaded={person}>
+          {person ? (
+            <>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur ipsam quae veniam facere quam repudiandae ab sint
+                quas esse deserunt.
+              </p>
+              <div className="flex space-between"><button>BUTTON</button><button>BUTTON</button></div>
+            </>
+          ) : (
+            <div>
+              <Shape lines={3} />
+              <Shape width={"100%"} height={30}>
+                <Shape height={40} width={80} background={'#d5ead6'} />
+                <Shape height={40} width={80} background={'rgb(234 213 213)'} />
+              </Shape>
+            </div>
+          )}
+        </Skeleton>
+      </div>
+
     </div>
   );
 }

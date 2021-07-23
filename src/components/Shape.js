@@ -6,35 +6,37 @@ export default function Shape({
   center = false,
   my = 20,
   lines = 1,
+  children
 }) {
-  const Item = () => {
+  const Item = ({children}) => {
     return (
       <span
         style={{
-          display: 'block',
+          display: 'flex',
+          justifyContent: 'space-between',
           width,
           height,
-          background,
+          background : children ? "transparent" : background,
           marginTop: my / 2,
           marginBottom: my / 2,
           borderRadius: rounded ? "50%" : "0px",
           marginLeft: center ? "auto" : 0,
           marginRight: center ? "auto" : 0,
         }}
-      ></span>
+      >{children}</span>
     );
   };
 
   return (
     <>
       {lines === 1 ? (
-        <Item />
+        <Item>{children}</Item>
       ) : (
         <>
           {Array(lines)
             .fill(null)
             .map((_, index) => (
-              <Item key={index} />
+              <Item key={index}>{children}</Item>
             ))}
         </>
       )}
