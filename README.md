@@ -44,7 +44,7 @@ function App() {
 | rounded      | boolean       | get circle shape | false
 | width      | number,string       | width of the shape | 100% 
 | height      | number,string       | height of the shape | 16 
-| background      | string       | background of the shape | 16 |
+| background      | string       | background of the shape | rgb(247 247 247) |
 | center      | boolean       | align center | 16 |
 | my      | number       | y axis gap | 20 |
 | lines | number       | number of shape | 1 |
