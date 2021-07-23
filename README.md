@@ -56,7 +56,7 @@ function App() {
 ```jsx
 <Skeleton>
   <Shape lines={3} />
-<Shape height={30}>
+  <Shape height={30}>
     <Shape height={40} width={80} background={'#d5ead6'} />
     <Shape height={40} width={80} background={'rgb(234 213 213)'} />
   </Shape>
