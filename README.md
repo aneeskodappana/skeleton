@@ -13,7 +13,7 @@ import Shape from "./components/Shape";
 import Skeleton from "./components/Skeleton";
 
 function App() {
-	const [person, setPerson] = useState(null)
+  const [person, setPerson] = useState(null)
   return (
     <Skeleton untilLoaded={person}>
       <h1>{person?.name ?? <Shape height={30} />}</h1>
