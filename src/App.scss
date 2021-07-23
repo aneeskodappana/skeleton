@@ -13,7 +13,12 @@
   height: 100%;
   position: absolute;
   animation: loading 2s infinite;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.918), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.918),
+    transparent
+  );
   filter: blur(20px);
 }
 
@@ -31,7 +36,6 @@
   width: 300px;
 }
 
-
 .text-center {
   text-align: center;
 }
@@ -47,4 +51,11 @@
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
 }

@@ -50,4 +50,15 @@ function App() {
 | lines | number       | number of shape | 1 |
 
 
+- ## Nested Shapes  ```<Shape />```
 
+`<Shape />` is a generic component with nested shape support.
+```jsx
+<Skeleton>
+  <Shape lines={3} />
+    <Shape width={"100%"} height={30}>
+    <Shape height={40} width={80} background={'#d5ead6'} />
+    <Shape height={40} width={80} background={'rgb(234 213 213)'} />
+  </Shape>
+</Skeleton>
+```
