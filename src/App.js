@@ -1,14 +1,9 @@
-import "./App.scss";
 import Shape from "./components/Shape";
 import Skeleton from "./components/Skeleton";
 import { useEffect, useState } from "react";
+import { mockPerson } from "./mock";
+import "./App.scss";
 
-const mockPerson = {
-  name: "Winston churchill ",
-  image:
-    "https://media.gettyimages.com/photos/april-1939-british-conservative-politician-winston-churchill-picture-id3062107?s=612x612",
-  bio: "Sir Winston Leonard Spencer Churchill, KG, OM, CH, TD, DL, FRS, RA was a British statesman who served as Prime Minister of the United Kingdom from 1940 to 1945",
-};
 
 function App() {
   const [person, setPerson] = useState(null);
@@ -22,7 +17,6 @@ function App() {
 
   return (
     <div className="container">
-
       <div className={"box"}>
         <Skeleton untilLoaded={person}>
           <h1>{person?.name ?? <Shape height={30} />}</h1>
@@ -109,20 +103,22 @@ function App() {
                 Consequuntur ipsam quae veniam facere quam repudiandae ab sint
                 quas esse deserunt.
               </p>
-              <div className="flex space-between"><button>BUTTON</button><button>BUTTON</button></div>
+              <div className="flex space-between">
+                <button>BUTTON</button>
+                <button>BUTTON</button>
+              </div>
             </>
           ) : (
             <div>
               <Shape lines={3} />
               <Shape height={30}>
-                <Shape height={40} width={80} background={'#d5ead6'} />
-                <Shape height={40} width={80} background={'rgb(234 213 213)'} />
+                <Shape height={40} width={80} background={"#d5ead6"} />
+                <Shape height={40} width={80} background={"rgb(234 213 213)"} />
               </Shape>
             </div>
           )}
         </Skeleton>
       </div>
-
     </div>
   );
 }

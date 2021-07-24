@@ -1,5 +1,5 @@
 ## Skeleton
-
+![Drag Racing](example.png)
 ### Usage
 
 - Wrap your components inside `<Skeleton />`
@@ -16,7 +16,7 @@ function App() {
   const [person, setPerson] = useState(null)
   return (
     <Skeleton untilLoaded={person}>
-      <h1>{person?.name ?? <Shape height={30} />}</h1>
+      <p>{person?.name ?? <Shape />}</p>
     </Skeleton>
   );
 }
